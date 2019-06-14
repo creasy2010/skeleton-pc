@@ -7,6 +7,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "cross-env NODE_ENV=development node scripts/build.js",
+    "dll": "node scripts/dll.js",
     "build:prod": "cross-env NODE_ENV=production node scripts/build.js prod",
     "clean": "rm -rdf ./build && mkdir build",
     "page": "cd /Users/dong/Falcon/moon/app/src/core/page/redux &&  ts-node index.ts",

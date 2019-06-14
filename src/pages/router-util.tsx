@@ -1,6 +1,6 @@
 import React from 'react';
 import {Route,Redirect} from 'react-router-dom';
-import {getToken} from "wmservice/auth";
+import {getToken} from "service/auth";
 // import {AuthRoute} from  '@/pages/router-util';
 export function AuthRoute({ ...rest }) {
 

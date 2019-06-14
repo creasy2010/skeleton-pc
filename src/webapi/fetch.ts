@@ -1,10 +1,10 @@
 import { AsyncResult } from "../typings/index";
 import "whatwg-fetch";
 import { message as AntdMsg } from "antd";
-import config from "wmkit/config";
+import config from "kit/config";
 
 import {fetch as fetchPolyfill } from 'whatwg-fetch';
-import {getToken} from "wmservice/auth";
+import {getToken} from "service/auth";
 /**
  * 是否是字符串
  * @param param

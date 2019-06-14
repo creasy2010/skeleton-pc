@@ -8,14 +8,13 @@
     ],
     "baseUrl": "./src",
     "paths": {
-      "wmservice/*": ["./web_mobules/wmservice/*"],
-      "wmkit": ["./web_mobules/wmkit"],
-      "uikit/*": ["./uikit/*"],
-      "@/*": ["./*"],
-      "components/*": ["./components/*"],
-      "webapi/*": ["./webapi/*"],
-      "wmkit/*": ["./web_mobules/wmkit/*"],
-      "wmui/*": ["./web_mobules/wmui/*"]
+      "service/*": ["./web_mobules/service/*"],
+      "kit": ["./src/web_mobules/kit"],
+      "kit/*": ["./src/web_mobules/kit/*"],
+      "ui/*": ["./src/web_mobules/ui/*"],
+      "api/*": ["./src/webapi/*"],
+      "@/**": ["./src/**"],
+      "components/*": ["./components/*"]
     },
     "allowJs": true,
     "skipLibCheck": true,

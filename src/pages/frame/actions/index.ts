@@ -3,7 +3,7 @@ import {Command} from '../constant';
 import {Dispatch} from '@/typings';
 
 import Main from './main';
-import {getAuthInfo, getStoreInfo} from "wmservice/auth";
+import {getAuthInfo, getStoreInfo} from "service/auth";
 
 export default (dispatch: Dispatch) => {
   const actions = {
