@@ -39,17 +39,17 @@ function getServedPath(appPackageJson) {
 }
 
 const moduleFileExtensions = [
+  'tsx',
+  'ts',
+  'web.tsx',
+  'web.ts',
   'web.mjs',
   'mjs',
   'web.js',
+  'jsx',
   'js',
-  'web.ts',
-  'ts',
-  'web.tsx',
-  'tsx',
   'json',
   'web.jsx',
-  'jsx',
 ];
 
 // Resolve file paths in the same order as webpack
@@ -69,12 +69,14 @@ const resolveModule = (resolveFn, filePath) => {
 module.exports = {
   dotenv: resolveApp('.env'),
   appPath: resolveApp('.'),
-  appBuild: resolveApp('build'),//生成目录
+  appBuild: resolveApp('dist'),//生成目录
+  dllBuild: resolveApp('public/javascript/dll/'),//生成目录
   appPublic: resolveApp('public'),//
   appHtml: resolveApp('public/index.html'),
   appIndexJs: resolveModule(resolveApp, 'src/index'),//入口js
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
+  webNodeModules: resolveApp('web_modules'),
   appTsConfig: resolveApp('tsconfig.json'),
   yarnLockFile: resolveApp('yarn.lock'),
   testsSetup: resolveModule(resolveApp, 'src/setupTests'),

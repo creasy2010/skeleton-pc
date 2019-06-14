@@ -12,8 +12,10 @@ let questions = [
         name: 'selection',
         message: '请选择环境------------>',
         choices: [
-            { name: 'test1' },
             { name: 'dev' },
+            { name: 'test1' },
+            { name: 'test2' },
+            { name: 'test3' },
             { name: 'local' },
             { name: 'prod' },
         ],
@@ -23,7 +25,9 @@ let questions = [
 module.exports = ()=>{
     return new Promise((resolve,reject)=>{
         if(process.argv[2]) {
+            console.log(`根据进程参数选择环境:${process.argv[2]}`);
             resolve(process.argv[2]);
+            process.env.PORT =portMap[process.argv[2]];
         }else  if(process.env['NODE_ENV:']==='production'){
             resolve('prod');
         }else{

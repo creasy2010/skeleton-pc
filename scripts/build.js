@@ -54,24 +54,19 @@ var golbalConfig = {};
 // We require that you explicitly set browsers and do not fall back to
 // browserslist defaults.
 const { checkBrowsers } = require('react-dev-utils/browsersHelper');
-
+console.log('env-choose::>>');
 require('./env-choose')().then((envCode)=>{
+   console.log('env-choose::>>',envCode);
     golbalConfig  = configFactory('production',envCode);
 }).then(()=>{
     return checkBrowsers(paths.appPath, isInteractive);
 })
   .then(() => {
-    // First, read the current file sizes in build directory.
-    // This lets us display how much they changed later.
     return measureFileSizesBeforeBuild(paths.appBuild);
   })
   .then(previousFileSizes => {
-    // Remove all content but keep the directory so that
-    // if you're in it, you don't end up in Trash
     fs.emptyDirSync(paths.appBuild);
-    // Merge with the public folder
     copyPublicFolder();
-    // Start the webpack build
     return build(previousFileSizes);
   })
   .then(
@@ -130,6 +125,7 @@ require('./env-choose')().then((envCode)=>{
 
 // Create the production build and print the deployment instructions.
 function build(previousFileSizes) {
+  console.log('build;;>>>',webpack,previousFileSizes);
 
   let compiler = webpack(golbalConfig);
   return new Promise((resolve, reject) => {

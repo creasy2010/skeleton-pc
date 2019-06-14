@@ -45,6 +45,8 @@ let evnMap ={
     dev:require('./env-config/dev.js'),
     prod:require('./env-config/prod.js'),
     test1:require('./env-config/test1.js'),
+    test2:require('./env-config/test2.js'),
+    test3:require('./env-config/test3.js'),
     local:require('./env-config/local.js'),
 }
 
@@ -73,6 +75,7 @@ function getClientEnvironment(envCode,publicUrl) {
       env[key] = JSON.stringify(raw[key]);
       return env;
     }, {}),
+    "__ApiMock__":JSON.stringify(envCode==='prod'?{}:require('../.moon.json').api.mock.mockApi)
   };
 
   return { raw, stringified };

@@ -114,6 +114,7 @@ require('./env-choose')().then((envCode)=>{
   })
   .catch(err => {
     if (err && err.message) {
+      console.log(err);
       console.log(err.message);
     }
     process.exit(1);
