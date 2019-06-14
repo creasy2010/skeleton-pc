@@ -6,7 +6,7 @@
  * @company qianmi.com
  * @Date    2019/4/30
  **/
-import { getLocalJson, saveLocalJson } from 'wmkit/storage';
+import { getLocalJson, saveLocalJson } from 'kit/storage';
 import { StoreVO } from 'webapi/SupplierStoreController';
 let token = '';
 

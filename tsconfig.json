@@ -8,10 +8,10 @@
     ],
     "baseUrl": "./src",
     "paths": {
-      "service/*": ["./web_mobules/service/*"],
-      "kit": ["./src/web_mobules/kit"],
-      "kit/*": ["./src/web_mobules/kit/*"],
-      "ui/*": ["./src/web_mobules/ui/*"],
+      "service/*": ["./web_modules/service/*"],
+      "kit": ["./src/web_modules/kit"],
+      "kit/*": ["./src/web_modules/kit/*"],
+      "ui/*": ["./src/web_modules/ui/*"],
       "api/*": ["./src/webapi/*"],
       "@/**": ["./src/**"],
       "components/*": ["./components/*"]
