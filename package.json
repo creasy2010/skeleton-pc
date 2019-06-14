@@ -10,10 +10,8 @@
     "build": "cross-env NODE_ENV=development node scripts/build.js",
     "dll": "node scripts/dll.js",
     "build:prod": "cross-env NODE_ENV=production node scripts/build.js prod",
-    "clean": "rm -rdf ./build && mkdir build",
-    "page": "cd /Users/dong/Falcon/moon/app/src/core/page/redux &&  ts-node index.ts",
-    "api": "cd  /Users/dong/Falcon/moon/app/src/migrate/swagger/ &&  ts-node index.ts",
-    "test": "node scripts/test.js"
+    "clean": "rm -rdf ./dist && mkdir dist",
+    "api": "cd  /Users/dong/Falcon/moon/app/src/migrate/swagger/ &&  ts-node index.ts"
   },
   "dependencies": {
     "@babel/core": "7.2.2",
