@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "baseUrl": "./src",
+    "paths": {
+      "wmservice/*": ["./web_mobules/wmservice/*"],
+      "wmkit": ["./web_mobules/wmkit"],
+      "uikit/*": ["./uikit/*"],
+      "@/*": ["./*"],
+      "components/*": ["./components/*"],
+      "webapi/*": ["./webapi/*"],
+      "wmkit/*": ["./web_mobules/wmkit/*"],
+      "wmui/*": ["./web_mobules/wmui/*"]
+    },
+    "allowJs": true,
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "strictNullChecks": false,
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react"
+  },
+  "include": [
+    "src"
+  ]
+}

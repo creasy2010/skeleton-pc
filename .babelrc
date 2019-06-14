@@ -1,0 +1,19 @@
+{
+  "presets": [
+    ["react-app", { "flow": false, "typescript": true}],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "@/webapi": "webapi",
+        "@/redux": "redux",
+        "@/pages": "pages",
+        "wmkit": "web_mobules/wmkit",
+        "wmservice": "web_mobules/wmservice",
+        "wmui": "web_mobules/wmui"
+      }
+    }],"@babel/plugin-syntax-dynamic-import"
+  ]
+}
